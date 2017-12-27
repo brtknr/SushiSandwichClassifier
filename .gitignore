@@ -1,4 +1,5 @@
-__MACOSX
-sushi_or_sandwich
+__MACOSX/
+.ipynb_checkpoints/
+sushi_or_sandwich/
 *.h5
 *.zip
