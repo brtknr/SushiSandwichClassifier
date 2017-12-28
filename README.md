@@ -1,9 +1,9 @@
 # Sushi or Sandwich classifier
 
-I present 2 classifiers implemented in Keras using Tensorflow backend:
+I present 2 classifiers implemented in Keras using Tensorflow backend in the [Jupyter notebook](sushi-or-sandwich-keras.ipynb):
 
-- First attempt, a Convolutional Neural Network model
-- Second attempt, a transfer learning model trained using features extracted from MobileNet (ImageNet weights)
+- First attempt, a Convolutional Neural Network model,
+- Second attempt, a transfer learning model trained using features extracted from MobileNet (ImageNet weights).
 
 To train the models, I split the images into train-test datasets using 80%:20% (642:162) ratio. Since there are only 642 training images, I also implement a data augmentation function where the input images are randomly flipped horizontally, sheared, zoomed and rotated.
 
