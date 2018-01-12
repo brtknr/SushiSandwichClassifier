@@ -61,7 +61,7 @@ MobileNet is a light-weight neural network model engineered by Google. The weigh
 
 To improve the previous CNN model, features are extracted from MobileNet (using ImageNet training weights). The features are then used to train 2 fully connected layers to predict feature labels. A `relu` activation function is used between the fully connected layers and the final probabilities are treated with a `sigmoid` activation function. A drop-out value of 0.5 is applied during the training phase between the fully connected layers. Like before, the model uses `rmsprop` optimiser to minimise binary cross entropy. 
 
-The model achieves an accuracy of ~85% and an AUC of ~0.93 on the test dataset after 49 epochs (early stopping after no accuracy improvements for 20 epochs). This is a clearly an improvement over the previous model both in terms of accuracy and AUC.
+The model achieves an accuracy of ~85% and an AUC of ~0.92 on the test dataset after 49 epochs (early stopping after no accuracy improvements for 20 epochs). This is a clearly an improvement over the previous model both in terms of accuracy and AUC.
 
 A summary of the top layer stacked upon MobileNet is as follows:
 
@@ -103,5 +103,6 @@ In production, a model like this that has been extended to detect additional cat
 
 	WORKDIR=~/Coding/SushiSandwichClassifier
 	docker run -it -p 9999:9999 -v $WORKDIR/:/opt/sushi/ sushi jupyter notebook --port 9999 --ip=0.0.0.0 --allow-root --no-browser --notebook-dir=/opt/sushi/
+
 
 Navigate to http://localhost:9999/?token=[TOKEN]
